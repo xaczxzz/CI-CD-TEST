@@ -16,6 +16,15 @@ jobs:
     - name: Archive drcloud
       run: tar cvfz ./CI-CD-TEST.tar.gz *
 
+   # Runs a single command using the runners shell 
+    - name: Clean temp directory
+      run: |
+        rm -rf *
+        cp -r $GITHUB_WORKSPACE . 
+      
+    - name: archive drcloud 
+      run: tar cvfz ./CI-CD-TEST.tar.gz *
+       
     - name: AWS configure credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
