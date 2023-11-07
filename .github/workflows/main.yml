@@ -32,4 +32,4 @@ jobs:
       run: aws s3 cp --region ap-northeast-2 ./CI-CD-TEST.tar.gz s3://lsm-s3/archive/
 
     - name: Deploy with AWS CodeDeploy
-      run: aws deploy create-deployment --application-name githubaction-test --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name githubaction-test-group --s3-location bucket=github-action-codedeploy-s3,bundleType=tgz,key=archive/CI-CD-TEST.tar.gz
+      run: aws deploy create-deployment --application-name Debug-App --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name Debug-group-deploy --s3-location bucket=github-action-codedeploy-s3,bundleType=tgz,key=archive/CI-CD-TEST.tar.gz
