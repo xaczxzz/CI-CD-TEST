@@ -3,9 +3,9 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ubuntu/drcloud-deploy
+    destination: /home/ubuntu/CI-CD-TEST-deploy
 permissions:
-  - object: /home/ubuntu/drcloud-deploy
+  - object: /home/ubuntu/CI-CD-TEST-deploy
     owner: ubuntu
     group: ubuntu
     mode: 755
